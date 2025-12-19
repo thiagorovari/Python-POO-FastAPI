@@ -1,5 +1,6 @@
 from typing import List
 from POO.modelos.avaliacao import Avaliacao
+from POO.cardapio.item_cardapio import ItemCardapio
 
 class Restaurante:
     restaurantes: List['Restaurante'] = []
@@ -9,6 +10,7 @@ class Restaurante:
         self._categoria = categoria.upper()
         self._ativo = False
         self._avaliacao = []
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -40,6 +42,17 @@ class Restaurante:
         quantidade_de_notas = len(self._avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
+    
+    def add_item_cardapio(self,item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append(item)
+
+    def exibir_cardapio(self):
+        print(f"Cardapio do Restuarante {self._nome}")
+        for i in range(len(self._cardapio)):
+            print(f"{'Nome do item '.ljust(25)} | {'Preco'.ljust(25)} | {'Descricao'.ljust(12)}")
+            print(f"{self._cardapio[i]._nome.ljust(25)} | {str(self._cardapio[i]._preco).ljust(25)} \n")
+    
 
 
 
