@@ -50,8 +50,8 @@ class Restaurante:
     def exibir_cardapio(self):
         print(f"Cardapio do Restuarante {self._nome}")
         for i in range(len(self._cardapio)):
-            print(f"{'Nome do item '.ljust(25)} | {'Preco'.ljust(25)} | {'Descricao'.ljust(12)}")
-            print(f"{self._cardapio[i]._nome.ljust(25)} | {str(self._cardapio[i]._preco).ljust(25)} \n")
+            print(f"{'Nome do item '.ljust(25)} | {'Preco'.ljust(25)} |")
+            print(f"{self._cardapio[i]._nome.ljust(25)} | R$:{str(self._cardapio[i]._preco).ljust(25)} \n")
     
 
 
