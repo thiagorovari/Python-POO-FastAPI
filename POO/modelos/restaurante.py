@@ -1,5 +1,5 @@
 from typing import List
-from modelos.avaliacao import Avaliacao
+from POO.modelos.avaliacao import Avaliacao
 
 class Restaurante:
     restaurantes: List['Restaurante'] = []
