@@ -6,7 +6,8 @@ class Bebida(ItemCardapio):
         self._tamanho = tamanho
     
     def __str__(self):
-        #print(f"{'Bebida'.ljust(25)} | {'Preco'.ljust(25)} | 'Tamanho'")
-        #print(f' {self._nome.ljust(25)} | {str(self._preco).ljust(25)} |{self._tamanho} ') ERRO NO PRINT
         return self._nome
+    
+    def aplicar_desconto(self):
+        self._preco = self._preco*0.95
     
