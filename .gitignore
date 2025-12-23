@@ -7,3 +7,4 @@
 /venv
 requirements.txt
 request_restaurantes/__pycache__
+*.json
